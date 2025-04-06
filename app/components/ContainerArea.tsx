@@ -1,5 +1,6 @@
 import { Item } from "../types/item";
 import { motion } from "framer-motion";
+import BoxHearth from "./BoxHearth"
 
 interface ContainerAreaProps {
   items: Item[];
@@ -20,6 +21,7 @@ export default function ContainerArea({ items }: ContainerAreaProps) {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3 }}
           >
+            <BoxHearth></BoxHearth>
             <p className="font-semibold">{item.name}</p>
             <p className="text-xs">ID: {item.itemId}</p>
             <p className="text-xs">Container: {item.containerId}</p>
